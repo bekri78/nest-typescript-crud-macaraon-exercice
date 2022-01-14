@@ -23,7 +23,6 @@ export class ProductsService {
     return result.id as string;
   }
 
-  // pour avoir tous les produits
   async getProduct() {
     const products = await this.courseRepository.findAll(); // permet de trouver la donnée methode mongoose exec permet de
 
