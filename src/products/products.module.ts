@@ -1,3 +1,4 @@
+import { CourseRepository } from 'src/repository/product.repository';
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -11,6 +12,6 @@ import { ProductSchema } from './product.model';
     MongooseModule.forFeature([{ name: 'Product', schema: ProductSchema }]),
   ],
   controllers: [ProductsController],
-  providers: [ProductsService],
+  providers: [ProductsService, CourseRepository],
 })
 export class ProductsModule {}
